@@ -9,7 +9,7 @@ jobs:
   build-test-branch:
     name: "Build and Test Of PR"
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
 
@@ -22,7 +22,7 @@ jobs:
     - name: Setup .NET Core 5
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: 5.0.x
     
     - name: Install dependencies
       run: dotnet restore "${{ github.workspace }}/mywebapp/mywebapp.sln"
