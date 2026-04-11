@@ -68,6 +68,7 @@ jobs:
    
     - name: 'Run Azure webapp deploy action using publish profile credentials'
       uses: azure/webapps-deploy@v2
+      continue-on-error: true
       with: 
         app-name: mywebapp-actions
         package: 'mywebappbuildartifacts'
